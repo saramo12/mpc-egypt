@@ -1,0 +1,1010 @@
+/********** Template CSS **********/
+:root {
+    --primary: #0463FA;
+    --light: #ffffff;
+    --dark: #1B2C51;
+}
+
+.fw-medium {
+    font-weight: 500 !important;
+}
+
+.fw-bold {
+    font-weight: 700 !important;
+}
+
+.fw-black {
+    font-weight: 900 !important;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    font-weight: 500;
+    transition: .5s;
+}
+
+.btn.btn-primary,
+.btn.btn-secondary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+
+/*** Navbar ***/
+/*** General Styles ***/
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*** Navbar ***/
+.navbar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.navbar.sticky-top {
+    background-color: #ffffff;
+}
+
+.navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar .navbar-brand h1 {
+    font-size: 1.5rem;
+    color: #3a26f5;
+    margin: 0;
+    font-weight: bold;
+}
+
+.navbar .navbar-nav .nav-link {
+    margin: 0 15px;
+    padding: 10px 0;
+    color: #555;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--primary, #007bff);
+}
+
+.navbar .dropdown-menu {
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*** Responsive Adjustments ***/
+@media (max-width: 991.98px) {
+    .navbar .navbar-nav .nav-link {
+        margin: 5px 0;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    .navbar .navbar-brand {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .navbar-brand h1 {
+        font-size: 1.2rem;
+    }
+
+    .navbar .navbar-nav .nav-link {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar .navbar-nav {
+        flex-direction: column;
+    }
+
+    .navbar .navbar-brand img {
+        max-height: 40px;
+    }
+}
+
+/*** Responsive Logo ***/
+.responsive-logo {
+    max-height: 130px;
+    height: auto;
+    width: auto;
+}
+
+/*** Buttons ***/
+.navbar .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    margin: 5px 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .btn:hover {
+    background-color: var(--primary, #007bff);
+    color: #fff;
+}
+
+/*** Headings ***/
+.responsive-headings {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1524ee;
+    margin: 0;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .responsive-headings {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+
+/*** Dropdown Hover Effects ***/
+@media (min-width: 992px) {
+    .navbar .dropdown:hover .dropdown-menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+}
+
+/*** Header ***/
+.header-carousel .owl-carousel-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 3rem;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 0 30px rgba(0, 0, 0, .1);
+}
+
+.header-carousel .owl-nav {
+    position: absolute;
+    width: 200px;
+    height: 45px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-carousel .owl-nav .owl-prev,
+.header-carousel .owl-nav .owl-next {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 45px;
+    font-size: 22px;
+    transition: .5s;
+}
+
+.header-carousel .owl-nav .owl-prev:hover,
+.header-carousel .owl-nav .owl-next:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.header-carousel .owl-dots {
+    position: absolute;
+    height: 45px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container to align logos */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Space between logos */
+    margin-top: 40px; /* Adds 20px space above the logo container */
+
+}
+
+/* Logo styles */
+.logo-hover {
+    max-height: 200px;
+    padding: 10px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.logo-hover:hover {
+    opacity: 0.6; /* Fades on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+
+.header-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 15px;
+    transition: .5s;
+}
+
+.header-carousel .owl-dot::after {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 5px;
+    top: 4px;
+    left: 4px;
+    background: #FFFFFF;
+    border-radius: 5px;
+}
+
+.header-carousel .owl-dot.active {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.page-header {
+    background: url(../img/header-page.jpg) top center no-repeat;
+    background-size: cover;
+    text-shadow: 0 0 30px rgba(0, 0, 0, .1);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: var(--light);
+}
+
+
+/*** Service ***/
+.service-item {
+    transition: .5s;
+}
+
+.service-item:hover {
+    margin-top: -10px;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .08);
+}
+
+.service-item .btn {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    background: #FFFFFF;
+    border-radius: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.service-item:hover .btn {
+    width: 140px;
+}
+
+
+/*** Feature ***/
+@media (min-width: 992px) {
+    .container.feature {
+        max-width: 100% !important;
+    }
+
+    .feature-text  {
+        padding-left: calc(((100% - 960px) / 2) + .75rem);
+    }
+}
+
+@media (min-width: 1200px) {
+    .feature-text  {
+        padding-left: calc(((100% - 1140px) / 2) + .75rem);
+    }
+}
+
+@media (min-width: 1400px) {
+    .feature-text  {
+        padding-left: calc(((100% - 1320px) / 2) + .75rem);
+    }
+}
+
+
+/*** Team ***/
+.team-item img {
+    width: 100%; /* اجعل العرض كاملًا داخل الحاوية */
+    max-height: 600px; /* إذا كنت تريد ضبط الحد الأقصى للارتفاع */
+    object-fit: fill; /* قص الصورة إذا لزم الأمر لتناسب الحاوية */
+    position: relative;
+    top: 0;
+    transition: .5s;
+    max-width: 100%; /* Ensure the image scales properly */
+    height: auto;    /* Maintain the aspect ratio */
+}
+
+.team-item:hover img {
+    top: -30px;
+}
+
+.team-item .team-text {
+    height: 100px;
+    position: relative;
+    height: max-content; /* Ensure height adjusts to content */
+    overflow: visible; /* Allow content to overflow if necessary */
+    text-overflow: clip; /* Prevent text truncation */
+    white-space: normal; /* Allow text to wrap to the next line */
+    max-height: 250px; /* Set default height for cropped state */
+    cursor: pointer;   /* Show a pointer cursor to indicate clickability */
+    transition: max-height 0.3s ease; /* Smooth transition for expanding/collapsing */
+}
+
+
+.team-item:hover .team-text {
+    margin-top: -60px;
+    height: 460px;
+}
+
+.team-item .team-text .team-social {
+    opacity: 1;
+    transition: .5s;
+    max-height: 1000px; /* Set a maximum height */
+    overflow-y: auto;  /* Add vertical scrolling */
+}
+
+.team-item:hover .team-text .team-social {
+    opacity: 1;
+}
+
+.team-item .team-social .btn {
+    display: inline-flex;
+    color: var(--primary);
+    background: #FFFFFF;
+    border-radius: 40px;
+}
+
+.team-item .team-social .btn:hover {
+    color: #FFFFFF;
+    background: var(--primary);
+}
+
+
+/*** Appointment ***/
+.bootstrap-datetimepicker-widget.bottom {
+    top: auto !important;
+}
+
+.bootstrap-datetimepicker-widget .table * {
+    border-bottom-width: 0px;
+}
+
+.bootstrap-datetimepicker-widget .table th {
+    font-weight: 500;
+}
+
+.bootstrap-datetimepicker-widget.dropdown-menu {
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.bootstrap-datetimepicker-widget table td.active,
+.bootstrap-datetimepicker-widget table td.active:hover {
+    background: var(--primary);
+}
+
+.bootstrap-datetimepicker-widget table td.today::before {
+    border-bottom-color: var(--primary);
+}
+
+
+/*** Testimonial ***/
+.testimonial-carousel::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+}
+
+.testimonial-carousel::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .testimonial-carousel::before,
+    .testimonial-carousel::after {
+        width: 200px;
+    }
+}
+
+@media (min-width: 992px) {
+    .testimonial-carousel::before,
+    .testimonial-carousel::after {
+        width: 300px;
+    }
+}
+
+.testimonial-carousel .owl-item .testimonial-text {
+    background: var(--light);
+    transform: scale(.8);
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-text {
+    background: var(--primary);
+    transform: scale(1);
+}
+
+.testimonial-carousel .owl-item .testimonial-text *,
+.testimonial-carousel .owl-item .testimonial-item img {
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-text * {
+    color: var(--light) !important;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-item img {
+    background: var(--primary) !important;
+} 
+
+.testimonial-carousel .owl-nav {
+    position: absolute;
+    width: 350px;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: .5s;
+    z-index: 1;
+}
+
+.testimonial-carousel:hover .owl-nav {
+    width: 300px;
+    opacity: 1;
+}
+
+.testimonial-carousel .owl-nav .owl-prev,
+.testimonial-carousel .owl-nav .owl-next {
+    position: relative;
+    color: var(--primary);
+    font-size: 45px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-nav .owl-prev:hover,
+.testimonial-carousel .owl-nav .owl-next:hover {
+    color: var(--dark);
+}
+
+
+/*** Footer ***/
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    border: 1px solid #FFFFFF;
+    transition: .3s;
+}
+
+.footer .btn.btn-social:hover {
+    color: var(--primary);
+}
+
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    color: var(--primary);
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+    color: var(--light);
+}
+
+.footer .copyright a:hover {
+    color: var(--primary);
+}
+/* Example CSS to style the logo */
+header img {
+    max-height: 50px;  /* Adjust logo size */
+    width: auto;       /* Maintain aspect ratio */
+    
+}
+/* Container Styles */
+/* Container Styles */
+.moving-banner {
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #1A1A1A; /* Dark background for a professional look */
+    position: relative;
+    width: 96vw; /* Full width */
+    height: 80px; /* Default height for PCs */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Scroll Content */
+.moving-banner-content {
+    display: inline-flex;
+    animation: scroll-right-to-left 100s linear infinite; /* Slower scroll for readability */
+    white-space: nowrap; /* Prevent line breaks */
+    width: 200%; /* Content width more than the container */
+}
+
+.moving-banner-content p {
+    display: inline-block;
+    margin: 0 40px; /* Space between text items */
+    font-size: 18px; /* Default medium font size */
+    color: #f1f1f1; /* Light text color for readability */
+    line-height: 1.5;
+    font-family: 'Arial', sans-serif; /* Clean, modern font */
+}
+
+/* Keyframe for scrolling */
+@keyframes scroll-right-to-left {
+    0% {
+        transform: translateX(-100%); /* Start off-screen to the left */
+    }
+    100% {
+        transform: translateX(100%); /* Move off-screen to the right */
+    }
+}
+
+/* Professional Highlight */
+.highlight {
+    font-size: 22px; /* Slightly larger for emphasis */
+    font-weight: bold; /* Bold for importance */
+    background-color: transparent; /* Transparent background */
+    padding: 0 3px; /* Tight padding around text */
+    animation: color-change 3s ease-in-out infinite; /* Color change animation */
+}
+
+.highlightc {
+    font-size: 26px; /* Larger size for major emphasis */
+    font-weight: bold; /* Bold for emphasis */
+    background-color: transparent;
+    padding: 0 3px;
+    animation: color-change 3s ease-in-out infinite; /* Color change animation */
+}
+
+/* Color Change Animation */
+@keyframes color-change {
+    0% {
+        color: #ffcc00; /* Start with yellow */
+    }
+    25% {
+        color: #ff4d00; /* Transition to orange */
+    }
+    50% {
+        color: #00bfff; /* Transition to blue */
+    }
+    75% {
+        color: #32cd32; /* Transition to lime green */
+    }
+    100% {
+        color: #ffcc00; /* Back to yellow */
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .moving-banner {
+        height: 70px; /* Slightly reduced height */
+        /* width: 0vw; Full width */
+
+    }
+
+    .moving-banner-content p {
+        font-size: 16px; /* Adjust font size */
+        margin: 0 30px; /* Slightly reduced space between text items */
+    }
+}
+
+@media (max-width: 992px) {
+    .moving-banner {
+        height: 60px; /* Further reduced height */
+        width: 80vw; /* Full width */
+
+
+    }
+
+    .moving-banner-content p {
+        font-size: 14px; /* Adjust font size for tablets */
+        margin: 0 20px; /* Reduced space between items */
+    }
+}
+
+@media (max-width: 768px) {
+    .moving-banner {
+        height: 50px; /* Compact height for mobile */
+        
+
+    }
+
+    .moving-banner-content p {
+        font-size: 13px; /* Smaller text size */
+        margin: 0 15px; /* Less spacing for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .moving-banner {
+        height: 45px; /* Minimal height for very small devices */
+    }
+
+    .moving-banner-content p {
+        font-size: 11px; /* Smallest text size */
+        margin: 0 10px; /* Compact spacing */
+    }
+}
+
+  
+  .team-item img {
+    width: 100%; /* اجعل العرض كاملًا داخل الحاوية */
+    height: auto; /* اجعل الارتفاع متناسبًا */
+    max-height: 400px; /* إذا كنت تريد ضبط الحد الأقصى للارتفاع */
+    object-fit: fill; /* قص الصورة إذا لزم الأمر لتناسب الحاوية */
+}
+
+
+
+/* /
+/* Container styles */
+
+
+/* Container for the logos */
+.logo-container {
+    display: flex;
+    justify-content: space-around;  /* Distribute logos evenly */
+    flex-wrap: nowrap;              /* Ensure logos stay in the same row */
+    gap: 20px;                      /* Add spacing between logos */
+    margin: 10px auto;
+    width: 90%;
+    max-width: 1200px;              /* Optional: to limit max width of container */
+}
+
+/* Make each logo responsive but keep the same size */
+.logo-hover {
+    height: 240px;                 /* Set the fixed height for logos */
+    width: auto;                   /* Keep the width proportional */
+    transition: transform 0.3s ease;  /* Optional: for hover effect */
+}
+
+/* Hover effect for logos */
+.logo-hover:hover {
+    transform: scale(1.05);
+}
+
+/* Media Queries for Responsiveness */
+
+/* For medium-sized screens */
+@media (max-width: 800px) {
+    .logo-hover {
+        height: 120px;         /* Reduce logo height on medium screens */
+    }
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    .logo-hover {
+        height: 120px;         /* Further reduce logo height */
+    }
+}
+
+/* For very small screens */
+@media (max-width: 576px) {
+    .logo-hover {
+        height: 120px;         /* Further reduce logo height */
+    }
+}
+/* Make images in carousel responsive */
+.owl-carousel .owl-carousel-item img {
+    width: 100%;         /* Ensure images take full width of their container */
+    height: 440px; 
+    padding-top: 80px;       /* Maintain aspect ratio of the images */
+    /* object-fit: cover;   Ensure the images cover the container without distortion */
+    display: flex;      /* Avoid unnecessary space below images */
+}
+
+/* Responsive adjustments for the carousel */
+@media (max-width: 768px) {
+    .owl-carousel .owl-carousel-item {
+        padding: 0;       /* Remove extra padding on smaller screens */
+    }
+
+    
+}
+
+/* General styles for logos */
+.logo-hover {
+    width: 100%; /* Ensure logos are responsive */
+    max-width: 200px; /* Set a maximum size for logos */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for logos */
+.logo-hover:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Adjust padding for partners' names */
+.partner-name {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .logo-hover {
+        max-width: 180px; /* Reduce size on medium screens */
+    }
+}
+
+@media (max-width: 991px) {
+    .logo-hover {
+        max-width: 150px; /* Further reduce size for smaller screens */
+    }
+}
+
+@media (max-width: 767px) {
+    .logo-hover {
+        max-width: 120px; /* Ensure the logos fit well on mobile */
+    }
+}
+.zahraa-logo {
+    padding-top: 200px;
+}
+
+/* Default styling for desktops (PCs) */
+.responsive-image {
+    padding-top: 68px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Styling for laptops */
+@media (max-width: 1200px) {
+    .responsive-image {
+        padding-top: 50px; /* Adjust padding for laptops */
+    }
+}
+
+/* Styling for tablets */
+@media (max-width: 992px) {
+    .responsive-image {
+        padding-top: 40px; /* Adjust padding for tablets */
+        width: 90%; /* Slightly reduce width */
+    }
+}
+
+/* Styling for mobile devices */
+@media (max-width: 576px) {
+    .responsive-image {
+        padding-top: 20px; /* Adjust padding for mobile */
+        width: 100%; /* Full width for mobile screens */
+    }
+}
+/* For tablets and below */
+@media (max-width: 992px) {
+    .footer .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .footer .row {
+        text-align: center;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 576px) {
+    .footer .col-lg-3 {
+        margin-bottom: 20px;
+    }
+    .footer .btn-link {
+        font-size: 14px;
+    }
+    .footer .position-relative {
+        max-width: 100%;
+    }
+}
+
+  /* Make graph container responsive */
+  /* Make graph container responsive */
+/* Make graph container responsive */
+/* Make graph container responsive */
+#graph-container {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+
+  /* Adjust canvas size for smaller screens */
+  canvas {
+    width: 100%;
+    height: auto;
+    margin: 50px;
+  }
+
+  /* Mobile responsiveness for the graph */
+  @media (max-width: 768px) {
+    #graph-container {
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    canvas {
+      height: 300px; /* Adjust height for mobile */
+      margin: 20px;
+    }
+  }
+
+  /* Tablet responsiveness for the graph */
+  @media (max-width: 1024px) {
+    #graph-container {
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    canvas {
+      height: 500px; /* Adjust height for tablets */
+      margin: 30px;
+    }
+  }
+  /* Ensure the logo is responsive */
+
+
+
+         
+        .viewer-counters {
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            max-width: 300px;
+            background-color: #f0f0f0;
+        }
+        .viewer-counters h2 {
+            font-size: 2rem;
+            color: #007BFF;
+        }
+        .viewer-counters p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .buttons {
+            background-color: #007bff; /* Blue color */
+            color: white;
+            padding: 15px 50px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px; /* Rounded corners */
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+          }
+      
+          .buttons:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+          }
