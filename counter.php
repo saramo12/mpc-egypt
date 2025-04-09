@@ -17,36 +17,16 @@
 
 // $conn->close();
 
-// $file = "counter.txt";
-
-// if (!file_exists($file)) {
-//     file_put_contents($file, "1097266"); // Start from the existing count
-// }
-
-// $count = (int) file_get_contents($file);
-// $count++;
-// file_put_contents($file, $count);
-
-// echo $count;
-
-// ?>
-<?php
 $file = "counter.txt";
 
-// لو الملف مش موجود، اعملي ملف جديد وابدئي برقم ابتدائي
 if (!file_exists($file)) {
-    file_put_contents($file, "1097266");
+    file_put_contents($file, "1097266"); // Start from the existing count
 }
 
-// قراءة الرقم من الملف
-$count = (int)file_get_contents($file);
-
-// زيادة الرقم بـ 1
+$count = (int) file_get_contents($file);
 $count++;
-
-// حفظ الرقم الجديد
 file_put_contents($file, $count);
 
-// طباعة الرقم
 echo $count;
+
 ?>
