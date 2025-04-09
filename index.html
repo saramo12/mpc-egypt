@@ -199,22 +199,22 @@
 
                     <div class="col-sm-4">
                         <div class="border-start border-dark ps-4">
-                            <h2 class="text-blue mb-1" id="counter"> loading...</h2>
+                            <h2 class="text-blue mb-1" id="counter">جاري التحميل...</h2>
                             <p class="text-dark mb-0">Viewers</p>
                         </div>
-                    
-                        <script>
-                            fetch('counter.php')
-                                .then(response => response.text())
-                                .then(data => {
-                                    document.getElementById('counter').innerText = data;
-                                })
-                                .catch(error => {
-                                    document.getElementById('counter').innerText = "error!";
-                                    console.error('Error:', error);
-                                });
-                        </script>
                     </div>
+                    
+                    <script>
+                        fetch('counter.php') // تأكدي إن المسار صح، حسب مكان رفع الملف
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById('counter').innerText = data;
+                            })
+                            .catch(error => {
+                                document.getElementById('counter').innerText = "خطأ!";
+                                console.error('Error loading counter:', error);
+                            });
+                    </script>
                     
 
 
