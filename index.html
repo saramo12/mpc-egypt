@@ -117,6 +117,11 @@
                 <a href="partners.html" class="nav-item nav-link ">Partners</a>
 
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="/25-1-2025.exe" class="nav-item nav-link">Contact</a>
+
+                <a href="/25-1-2025.exe://run" >
+                    <button>تحميل البرنامج</button>
+                  </a>
 
             </div>
         </div>
@@ -173,7 +178,7 @@
                             <p class="text-dark mb-0">Patient Beds</p>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <!-- <div class="col-sm-4">
                         <div class="border-start border-dark ps-4">
                             <h2 class="text-blue mb-1" id="counter">0</h2>
                             <p class="text-dark mb-0">Viewers</p>
@@ -188,7 +193,32 @@
                     </script>
                     
                         
+                    </div> -->
+
+
+
+                    <div class="col-sm-4">
+                        <div class="border-start border-dark ps-4">
+                            <h2 class="text-blue mb-1" id="counter"> loading...</h2>
+                            <p class="text-dark mb-0">Viewers</p>
+                        </div>
+                    
+                        <script>
+                            fetch('counter.php')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('counter').innerText = data;
+                                })
+                                .catch(error => {
+                                    document.getElementById('counter').innerText = "error!";
+                                    console.error('Error:', error);
+                                });
+                        </script>
                     </div>
+                    
+
+
+
                     <!-- <div class="col-sm-4">
                         <div class="border-start border-dark ps-4">
                             <h2 class="text-blue mb-1" id="counter">Loading...</h2>
